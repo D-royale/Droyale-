@@ -10,3 +10,19 @@ document.querySelectorAll(".nav-links a").forEach(link => {
         navLinks.classList.remove("active");
     });
 });
+// Scroll reveal animation
+const revealSections = document.querySelectorAll(".section, .cta-section");
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+revealSections.forEach(section => {
+    revealObserver.observe(section);
+});
