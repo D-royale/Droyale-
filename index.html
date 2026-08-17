@@ -637,18 +637,107 @@
             your idea into a professional website.
         </p>
 
-        <a
-            href="https://api.whatsapp.com/send?phone=2347034413745"
-            class="btn btn-primary"
-            target="_blank"
-            rel="noopener"
-        >
-            Chat on WhatsApp
-        </a>
+        <form class="project-form" onsubmit="sendProjectRequest(event)">
+
+            <input
+                type="text"
+                id="clientName"
+                placeholder="Your name"
+                required
+            >
+
+            <input
+                type="text"
+                id="businessName"
+                placeholder="Business or brand name"
+                required
+            >
+
+            <select id="websiteType" required>
+                <option value="" disabled selected>
+                    What type of website do you need?
+                </option>
+                <option value="Business Website">
+                    Business Website
+                </option>
+                <option value="Landing Page">
+                    Landing Page
+                </option>
+                <option value="Personal Portfolio">
+                    Personal Portfolio
+                </option>
+                <option value="E-commerce Website">
+                    E-commerce Website
+                </option>
+                <option value="Other">
+                    Other
+                </option>
+            </select>
+
+            <select id="packageChoice" required>
+                <option value="" disabled selected>
+                    Choose a package
+                </option>
+                <option value="Starter - ₦25,000">
+                    Starter — ₦25,000
+                </option>
+                <option value="Business - ₦50,000">
+                    Business — ₦50,000
+                </option>
+                <option value="Premium - ₦90,000+">
+                    Premium — ₦90,000+
+                </option>
+                <option value="Not sure yet">
+                    Not sure yet
+                </option>
+            </select>
+
+            <textarea
+                id="projectDetails"
+                rows="5"
+                placeholder="Tell us briefly about your project..."
+                required
+            ></textarea>
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+                Send Project Request
+            </button>
+
+        </form>
 
     </div>
 
 </section>
+
+<script>
+function sendProjectRequest(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("clientName").value;
+    const business = document.getElementById("businessName").value;
+    const website = document.getElementById("websiteType").value;
+    const packageChoice = document.getElementById("packageChoice").value;
+    const details = document.getElementById("projectDetails").value;
+
+    const message =
+        "Hi D'Royale!%0A%0A" +
+        "I'd like to discuss a website project.%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Business/Brand: " + encodeURIComponent(business) + "%0A" +
+        "Website Type: " + encodeURIComponent(website) + "%0A" +
+        "Package: " + encodeURIComponent(packageChoice) + "%0A" +
+        "Project Details: " + encodeURIComponent(details);
+
+    window.open(
+        "https://api.whatsapp.com/send?phone=2347034413745&text=" + message,
+        "_blank"
+    );
+}
+</script>
 
 </main>
 
