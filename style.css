@@ -2,7 +2,13 @@
 html{scroll-behavior:smooth}
 body{font-family:Arial,sans-serif;background:#070707;color:#fff;line-height:1.6;overflow-x:hidden}
 a{color:inherit}
-:root{--blue:#00d9ff;--muted:#999;--line:#252525;--card:#111;--max:1200px}
+:root{
+    --blue:#00d9ff;
+    --muted:#999;
+    --line:#252525;
+    --card:#111;
+    --max:1280px;
+}
 
 .navbar{
 position:sticky;top:0;z-index:1000;
@@ -83,7 +89,7 @@ border-radius:12px;background:#080808
 .website-preview strong{font-size:35px}
 .website-preview small{color:var(--blue);letter-spacing:2px;margin-top:8px}
 
-.section{padding:100px 6%}
+.section{padding:110px 5%}
 .section-heading,.service-grid,.work-grid,.about-content,.cta-content{
 max-width:var(--max);margin:auto
 }
@@ -153,7 +159,7 @@ line-height:1.05;letter-spacing:-2px
 .about-text p+p{margin-top:20px}
 
 .cta-section{
-padding:120px 6%;text-align:center;
+padding:130px 5%;text-align:center;
 background:radial-gradient(circle at center,rgba(0,217,255,.12),transparent 45%)
 }
 
@@ -606,11 +612,11 @@ border-bottom:1px solid var(--line)
 .hero {
     position: relative;
     min-height: 88vh;
-    padding: 100px 6%;
+    padding: 100px 5%;
     display: grid;
-    grid-template-columns: 1.1fr .9fr;
+    grid-template-columns: 1.05fr .95fr;
     align-items: center;
-    gap: 70px;
+    gap: 80px;
     overflow: hidden;
 }
 
