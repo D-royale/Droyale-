@@ -743,6 +743,7 @@ function sendProjectRequest(event) {
 
     const name = document.getElementById("clientName").value;
     const business = document.getElementById("businessName").value;
+    const email = document.getElementById("clientEmail").value;
     const website = document.getElementById("websiteType").value;
     const packageChoice = document.getElementById("packageChoice").value;
     const details = document.getElementById("projectDetails").value;
@@ -752,6 +753,7 @@ function sendProjectRequest(event) {
         "I'd like to discuss a website project.%0A%0A" +
         "Name: " + encodeURIComponent(name) + "%0A" +
         "Business/Brand: " + encodeURIComponent(business) + "%0A" +
+        "Email: " + encodeURIComponent(email) + "%0A" +
         "Website Type: " + encodeURIComponent(website) + "%0A" +
         "Package: " + encodeURIComponent(packageChoice) + "%0A" +
         "Project Details: " + encodeURIComponent(details);
